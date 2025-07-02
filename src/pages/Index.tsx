@@ -1,5 +1,4 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Plus, Package, BarChart3, Settings, Download, Upload, AlertTriangle } from 'lucide-react';
@@ -34,6 +33,18 @@ const Index = () => {
   const [scannedBarcode, setScannedBarcode] = useState<string>('');
   const [activeTab, setActiveTab] = useState('dashboard');
 
+ useEffect(() => {
+  if (expiringProducts.length > 0) {
+    toast({
+      title: "Expiry Alert",
+      description: `⏰ Dear user, ${expiringProducts.length} product(s) are expiring in 2 days!`,
+      variant: "default"
+    });
+  }
+}, [expiringProducts]);
+
+
+
   const dashboardStats = calculateDashboardStats(products);
 
   const handleSaveProduct = (product: Omit<Product, 'id' | 'created_at' | 'updated_at'>) => {
@@ -65,7 +76,6 @@ const Index = () => {
     setScannedBarcode(barcode);
     setShowScanner(false);
     
-    // Check if product with this barcode already exists
     const existingProduct = await ProductService.getProductByBarcode(barcode);
     if (existingProduct) {
       toast({
@@ -88,6 +98,7 @@ const Index = () => {
     try {
       const csvContent = exportToCSV(products);
       const blob = new Blob([csvContent], { type: 'text/csv' });
+
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
@@ -134,8 +145,6 @@ const Index = () => {
       }
     };
     reader.readAsText(file);
-    
-    // Reset the input
     event.target.value = '';
   };
 
