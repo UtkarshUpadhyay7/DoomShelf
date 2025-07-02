@@ -1,73 +1,59 @@
-# Welcome to your Lovable project
+# 🧊 DoomShelf - Your Expiry Date Guardian
 
-## Project info
+> Hackathon Project | Built with React, Tauri, Supabase, and ❤️
 
-**URL**: https://lovable.dev/projects/8839affe-3818-4499-86c3-9215fb4a77c6
+---
 
-## How can I edit this code?
+## 📦 What is DoomShelf?
 
-There are several ways of editing your application.
+**DoomShelf** is a smart expiry tracker that helps users — especially retailers — keep track of expiring products using barcode scanning and manual entry. It prevents waste, sends smart expiry alerts, and helps you manage inventory better.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8839affe-3818-4499-86c3-9215fb4a77c6) and start prompting.
+## 🚀 Features
 
-Changes made via Lovable will be committed automatically to this repo.
+- 📸 Barcode scanning to quickly add products  
+- ✍️ Manual product entry with category, expiry date, etc.  
+- 🛎️ Notification alerts before expiry  
+- 📊 Expiry-wise shelf overview  
+- ☁️ Real-time database with Supabase  
+- 📥 Import/export CSV  
+- 🛠️ Offline-first Tauri-based desktop app  
+- 🔐 OAuth Login for Users, Retailers, Guests
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🖼️ Screenshots
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+| Dashboard | Add Product | Notifications |
+|----------|-------------|----------------|
+| *(Add screenshots here for extra points!)* |
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 💾 Download MSI Installer
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+> ✅ [**Click to Download DoomShelf Installer (.msi)**](https://drive.google.com/file/d/1NlN0Ik8VNOQamdrSHwuYPexRPjRMy6lk/view?usp=drive_link)
 
-# Step 3: Install the necessary dependencies.
-npm i
+_Or clone & run it locally using instructions below._
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## 🛠️ Tech Stack
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- **Frontend:** React + Vite + TypeScript  
+- **UI Framework:** Tailwind CSS + shadcn/ui  
+- **Desktop:** Tauri  
+- **Backend:** Supabase  
+- **Notifications:** Local desktop alerts  
+- **Auth:** OAuth (User, Retailer, Guest)
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 💻 How to Run Locally
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/8839affe-3818-4499-86c3-9215fb4a77c6) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+```bash
+git clone https://github.com/UtkarshUpadhyay7/DoomShelf
+cd DoomShelf
+pnpm install          # or npm install
+pnpm tauri dev        # for Tauri dev environment
