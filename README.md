@@ -57,3 +57,11 @@ git clone https://github.com/UtkarshUpadhyay7/DoomShelf
 cd DoomShelf
 pnpm install          # or npm install
 pnpm tauri dev        # for Tauri dev environment
+
+---
+
+## 👥 Contributors
+
+- 🧊 Utkarsh Upadhyay – Developer & Project Lead  
+- 🤝 Siddhi Bawankar – Contributor (UI ideas, testing, documentation support)
+
